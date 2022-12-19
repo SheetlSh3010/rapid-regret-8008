@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+        .topbar{
+            background-color: rgb(107, 129, 255);
+            color: white;
+            text-align: center;
+            padding: 10px 16px;
+        }
+        .new{
+              margin-right: 6px;
+              font-size: 12px;
+              line-height: 28px;
+              color: rgb(0, 32, 214);
+              padding: 4px 8px;
+              background: rgb(213, 219, 255);
+              border-radius: 100px;
+              font-weight: 800;
+              text-align: center;          
+        }
+        .new1{
+            line-height: 28px;
+            font-size: 14px;
+            color: white;
+            text-align: center;
+        }
+        .new2{
+            color: white;
+    font-size: 14px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    line-height: 28px;
+    cursor: pointer;
+        }
+        #head{
+            margin-top: 150px;
+
+        }
+        .thead{
+            font-size: 60px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .par{
+            margin-bottom: 3em;
+            margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 25px;
+    line-height: 1.6;
+    margin: 0px 0px 1rem;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0.1px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+
+        }
+        .bt{
+            position: relative;
+    margin: 0px auto 40px;
+    width: min-content;
+    display: block;
+        }
+        .but{
+            display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+        }
+        .first{
+            border-left: 2px solid rgb(31, 53, 179);
+    border-radius: 0px 4px 4px 0px;
+    padding: 1em;
+    cursor: pointer;
+    transition: background-color 200ms ease-out 0s;
+    min-width: 94px;
+    border: 2px solid rgb(31, 53, 179);
+    color: rgb(31, 53, 179);
+    font-weight: 600;
+    background-color: rgb(233, 236, 254);
+
+        }
+        .last{
+            border-right: none;
+    border-radius: 4px 0px 0px 4px;
+    border: 1px solid rgb(99, 99, 99);
+    background-color: white;
+    color: rgb(99, 99, 99);
+    padding: 1em;
+    cursor: pointer;
+    transition: background-color 200ms ease-out 0s;
+    min-width: 94px;
+        }
+        .imge{
+            display: flex;
+            justify-content: center;
+            margin-top: 55px;
+            margin-bottom: 60px;
+        }
+        .box1{
+            display: flex;
+    /* flex-flow: row wrap; */
+    -webkit-box-align: baseline;
+    align-items: baseline;
+    margin: auto 1em;
+    gap: 24px;
+    -webkit-box-pack: center;
+    justify-content: center;
+        }
+        .box2{
+            position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+    background-color: white;
+    border: 1px
+px
+ solid black;
+    border-radius: 5px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 50px -1px;
+    transition: box-shadow 0.2s linear 0s, opacity 125ms ease-out 0s;
+        }
+        .box3{
+            padding: 40px 18px 25px;
+        }
+        .h2c{
+            text-align: left;
+    margin-bottom: 10px;
+    font-size: calc(1.375rem + (1vw - 3.75px) * 1.1268);
+    line-height: calc(1.875rem + 6 * ((100vw - 21rem) / 680));
+    font-weight: 700;
+    margin: 0px 0px 1.5rem;
+        }
+        .p11{
+            height: unset;
+            color: rgb(99, 99, 99);
+    font-size: 1rem;
+    line-height: 24px;
+    text-align: left;
+    margin-bottom: 36px;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0.1px;
+        }
+        .box4{
+            margin-bottom: 24px;
+            display: block;
+        }
+        .box5{
+            display: flex;
+    gap: 4px;
+    align-items: flex-end;
+    margin-bottom: 24px;
+        }
+        .p12{
+            font-size: 60px;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    text-align: left;
+    line-height: 0.8;
+    display: flex;
+    align-items: flex-end;
+        }
+        .span1{
+            font-size: 34px;
+        }
+        .p13{
+            font-size: 0.9rem;
+    margin-bottom: 0px;
+    text-align: left;
+    line-height: 1.6;
+    margin: 0px 0px 1rem;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0.1px;
+        }
+       .p14{
+        margin-bottom: 0px;
+        font-size: 0.9rem;
+        text-align: left;
+        line-height: 1.6;
+    margin: 0px 0px 1rem;
+       }
+       .a1{
+        display: flex;
+    text-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 18px;
+    line-height: 2.6;
+    font-weight: 400;
+    border-radius: 5px;
+    border: 0px;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    position: relative;
+    transition-property: background-color, border-color, color, box-shadow;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    min-width: 0px;
+    flex: 0 0 auto;
+    height: 48px;
+    font-family: Roboto, sans-serif;
+    background-color: rgb(44, 75, 255);
+    color: rgb(255, 255, 255);
+    padding: 0px 24px;
+    box-shadow: none;
+    -webkit-box-pack: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: auto;
+    width: 100%;
+       }
+       .list{
+        margin: 24px 0px;
+       }
+       .listpoint{
+        list-style: none;
+    display: flex;
+    align-items: flex-start;
+    line-height: 2;
+       }
+       .a11{
+        color: black;
+    border-bottom: 1px solid rgb(44, 75, 255);
+    padding-bottom: 4px;
+    transition: color 200ms ease-out 0s;
+    font-size: 18px;
+    text-decoration: none;
+       }
+       .span2{
+        display: block;
+    font-size: 16px;
+    text-align: left;
+    line-height: 1.4;
+    /* font-weight: bold; */
+    margin-bottom: 0px;
+
+       }
+       .back1{
+        height: 90%;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    z-index: -1;
+    background: url('https://buffer.com/static/background/yellow-bg-withpattern.jpg') 0% 0% / cover rgb(250, 222, 42);
+    padding: 0px;
+       }
+       section{
+        display: block;
+       }
+         .logo{
+            position: relative;
+    padding-top: 70px;
+    padding-bottom: 0px !important;
+         }
+         .logo1{
+            margin: 0px auto;
+    padding: 0px 20px;
+         }
+         .mainlogo{
+            display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: row;
+         }
+         .foot{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   /* column-gap: 180%; */
+   gap: 40%;
+   margin-left: 80%;
+   justify-content: center;
+   /* grid-template-areas: inherit; */
+   padding-inline-start: 30%;
+   width: 90%;
+   display: flex;
+   justify-content: space-evenly;
+   font-size: 20px;
+}
+#footicons{
+   display: flex;
+   margin-top: 30%;
+}
+#footer{
+   
+   width: 90%;
+   margin: auto;
+}
+.icons+img{
+      width: 50px;
+      height: 50px;
+}
+.img1{
+   width: 35px;
+   height: 35px;
+   gap: 3px;
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <div class="topbar">
+                <span class="new">New</span>
+                <span class="new1">Create and schedule Twitter threads! </span>
+                <a class="new2" href="/twitter?cta=bufferSite-globalBanner-twitter">Find out more</a>
+            </div>
+        </div>
+    </div>
+    <div id="head">
+        <h1 class="thead">Publish Flawlessly.</h1>
+        <h1 class="thead">Analyze Effortlessly. Engage Authentically.</h1>
+    </div>
+    <div>
+        <p class="par"> <!-- -->We’ve built simpler social media tools for busy people. Enjoy our free plan as you get <br> started, or trial our full toolkit priced to make marketing your business on social <br> affordable.<!-- --> </p>
+    </div>
+
+    <div class="bt">
+        <div class="but">
+            <button data-testid="annualToggleOn" class="first">Yearly</button>
+            <button data-testid="annualToggleOff" class="last">Monthly</button>
+
+        </div>
+    </div>
+    <div class="imge">
+        <svg height="24px" width="24px" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg"><g transform="translate(.074 .32)" fill="current" fill-rule="evenodd"><path d="M6.235 1.18c1.56 0 1.744.003 2.362.032.57.024.88.123 1.085.2.275.107.467.234.672.438.204.205.331.398.438.672.082.205.176.516.2 1.085.03.614.033.802.033 2.362s-.004 1.744-.033 2.362c-.024.57-.122.88-.2 1.085a1.803 1.803 0 0 1-.438.672 1.803 1.803 0 0 1-.672.438c-.204.082-.516.176-1.085.2-.614.029-.802.033-2.362.033s-1.744-.004-2.362-.033c-.57-.024-.88-.123-1.085-.2a1.803 1.803 0 0 1-.671-.438 1.803 1.803 0 0 1-.438-.672c-.082-.204-.177-.516-.201-1.085-.029-.614-.033-.802-.033-2.362s.004-1.744.033-2.362c.024-.57.123-.88.2-1.085.107-.274.234-.467.439-.672.204-.204.397-.331.671-.438.205-.081.516-.176 1.085-.2.618-.029.802-.033 2.362-.033zm0-1.053c-1.588 0-1.785.008-2.407.037C3.206.192 2.78.29 2.41.434a2.83 2.83 0 0 0-1.035.675C1.052 1.433.852 1.76.7 2.145c-.143.373-.241.799-.27 1.417-.029.622-.037.823-.037 2.407 0 1.589.008 1.785.037 2.407C.459 9 .557 9.424.7 9.793c.147.385.348.708.676 1.036.323.323.65.524 1.035.675.373.143.799.242 1.417.27.622.029.823.037 2.407.037 1.585 0 1.785-.008 2.407-.037.623-.028 1.049-.127 1.417-.27a2.83 2.83 0 0 0 1.036-.675c.327-.328.524-.651.675-1.036.144-.373.242-.798.27-1.417.03-.622.037-.823.037-2.407 0-1.588-.008-1.785-.037-2.407-.028-.623-.126-1.048-.27-1.417a2.83 2.83 0 0 0-.675-1.036 2.882 2.882 0 0 0-1.036-.675C9.686.291 9.261.192 8.642.164 8.024.13 7.824.127 6.235.127z"></path><path d="M6.235 2.968a3 3 0 1 0 0 6.002 3 3 0 1 0 0-6.002zm0 4.946a1.948 1.948 0 1 1-.001-3.897 1.948 1.948 0 0 1 .001 3.897z"></path><circle cx="9.355" cy="2.849" r="1"></circle></g>
+        </svg>
+        <svg height="24px" width="24px" viewBox="0 0 7 13" xmlns="http://www.w3.org/2000/svg"><path fill="current" stroke="current" d="M4.232 12.581V6.85h1.936l.29-2.244H4.237V3.177c0-.65.18-1.089 1.113-1.089h1.187V.086C5.963.03 5.386-.004 4.813 0 3.102 0 1.939 1.044 1.939 2.956v1.65H.002V6.85h1.929v5.731h2.3z" fill-rule="evenodd"></path></svg>
+        <svg height="30px" width="30px" viewBox="0 0 14 11" xmlns="http://www.w3.org/2000/svg"><path fill="current" stroke="current" d="M4.475 10.398c4.745 0 7.34-3.934 7.34-7.34 0-.111 0-.226-.003-.332a5.277 5.277 0 0 0 1.29-1.339 5.089 5.089 0 0 1-1.483.405c.536-.319.942-.822 1.134-1.428-.5.294-1.048.507-1.637.626a2.579 2.579 0 0 0-4.393 2.354A7.313 7.313 0 0 1 1.405.646a2.57 2.57 0 0 0-.348 1.294c0 .892.454 1.687 1.15 2.145a2.56 2.56 0 0 1-1.167-.32V3.8c0 1.252.889 2.288 2.072 2.53a2.62 2.62 0 0 1-.68.09c-.168 0-.327-.017-.487-.05a2.575 2.575 0 0 0 2.407 1.794 5.175 5.175 0 0 1-3.82 1.064 7.175 7.175 0 0 0 3.943 1.171" fill-rule="evenodd"></path></svg>
+        <svg height="24px" width="24px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg"><path fill="current" stroke="current" d="M15.236,0.308c-8.015,0 -14.512,6.487 -14.512,14.488c0,6.141 3.822,11.388 9.221,13.498c-0.132,-1.144 -0.239,-2.909 0.047,-4.161c0.263,-1.133 1.697,-7.202 1.697,-7.202c0,0 -0.43,-0.871 -0.43,-2.147c0,-2.015 1.17,-3.517 2.627,-3.517c1.242,0 1.84,0.93 1.84,2.039c0,1.24 -0.789,3.1 -1.207,4.829c-0.346,1.443 0.729,2.623 2.15,2.623c2.58,0 4.563,-2.718 4.563,-6.63c0,-3.47 -2.497,-5.89 -6.068,-5.89c-4.132,0 -6.557,3.088 -6.557,6.284c0,1.24 0.478,2.576 1.075,3.303c0.119,0.143 0.131,0.274 0.095,0.417c-0.107,0.453 -0.358,1.443 -0.406,1.646c-0.059,0.262 -0.215,0.322 -0.489,0.191c-1.816,-0.847 -2.95,-3.482 -2.95,-5.617c0,-4.567 3.32,-8.764 9.591,-8.764c5.028,0 8.946,3.577 8.946,8.371c0,4.996 -3.154,9.015 -7.525,9.015c-1.469,0 -2.855,-0.764 -3.321,-1.67c0,0 -0.728,2.767 -0.907,3.446c-0.323,1.264 -1.207,2.838 -1.804,3.804c1.362,0.418 2.795,0.644 4.3,0.644c8.014,0 14.512,-6.487 14.512,-14.488c0.024,-8.025 -6.474,-14.512 -14.488,-14.512Z"></path></svg>
+        <svg height="24px" width="30px" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path fill="current" stroke="current" d="M11.175.725H1.698a.81.81 0 0 0-.819.802v9.519c0 .442.369.802.819.802h9.477c.455 0 .823-.36.823-.802V1.527a.816.816 0 0 0-.823-.802zm-7 9.478h-1.65V4.897h1.65v5.306zm-.827-6.03a.96.96 0 0 1 0-1.917.96.96 0 0 1 0 1.916zm7.005 6.03h-1.65v-2.58c0-.614-.013-1.408-.856-1.408-.86 0-.99.671-.99 1.363v2.625H5.21V4.897h1.58v.724h.024c.221-.417.758-.855 1.56-.855 1.67 0 1.978 1.097 1.978 2.53v2.907z" fill-rule="nonzero"></path></svg>
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="30px" height="24px"><path d="m15.337 23.979 7.216-1.561s-2.604-17.613-2.625-17.73c-.018-.116-.114-.192-.211-.192s-1.929-.136-1.929-.136-1.275-1.274-1.439-1.411a.384.384 0 0 0-.121-.074l-.914 21.104h.023zM11.71 11.305s-.81-.424-1.774-.424c-1.447 0-1.504.906-1.504 1.141 0 1.232 3.24 1.715 3.24 4.629 0 2.295-1.44 3.76-3.406 3.76-2.354 0-3.54-1.465-3.54-1.465l.646-2.086s1.245 1.066 2.28 1.066a.944.944 0 0 0 .975-.932c0-1.619-2.654-1.694-2.654-4.359-.034-2.237 1.571-4.416 4.827-4.416 1.257 0 1.875.361 1.875.361l-.945 2.715-.02.01zM11.17.83c.136 0 .271.038.405.135-.984.465-2.064 1.639-2.508 3.992a62.82 62.82 0 0 1-1.889.578C7.697 3.75 8.951.84 11.17.84V.83zm1.235 2.949v.135c-.754.232-1.583.484-2.394.736.466-1.777 1.333-2.645 2.085-2.971.193.501.309 1.176.309 2.1zm.539-2.234c.694.074 1.141.867 1.429 1.755-.349.114-.735.231-1.158.366v-.252c0-.752-.096-1.371-.271-1.871v.002zm2.992 1.289c-.02 0-.06.021-.078.021s-.289.075-.714.21c-.423-1.233-1.176-2.37-2.508-2.37h-.115C12.135.209 11.669 0 11.265 0 8.159 0 6.675 3.877 6.21 5.846c-1.194.365-2.063.636-2.16.674-.675.213-.694.232-.772.87-.075.462-1.83 14.063-1.83 14.063L15.009 24l.927-21.166z"></path></svg>
+        <svg height="24px" width="30px" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="current" stroke="current" d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z" fill-rule="evenodd"></path></svg>
+        <svg fill="none" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" height="24px" width="30px" style="position:relative;top:10px;left:6px;transform:scale(1.8)"><path fill-rule="evenodd" clip-rule="evenodd" d="M.5 8.5a8.5 8.5 0 0 1 17 0 8.5 8.5 0 0 1-17 0Z" fill="#000"></path><path d="M12.719 7.198c0 .51-.417.93-.93.93a.932.932 0 0 1-.93-.93c0 .51-.416.93-.93.93A.932.932 0 0 1 9 7.198c0 .51-.416.93-.93.93a.932.932 0 0 1-.93-.93c0 .51-.416.93-.93.93a.932.932 0 0 1-.929-.93l.517-2.015s.108-.402.487-.402h5.43c.379 0 .487.402.487.402l.517 2.015Zm-.372 1.376v2.901c0 .41-.335.744-.744.744H6.397a.746.746 0 0 1-.744-.744v-2.9a1.473 1.473 0 0 0 1.487-.216 1.489 1.489 0 0 0 1.86 0 1.489 1.489 0 0 0 1.86 0 1.48 1.48 0 0 0 1.487.215Zm-.744 1.908c0-.074 0-.152-.018-.234l-.012-.06H10.47v.435h.673a.52.52 0 0 1-.115.231.658.658 0 0 1-.469.19.729.729 0 0 1-.502-.209.687.687 0 0 1 .008-.959c.256-.26.68-.26.948-.011l.052.048.312-.316-.06-.052a1.134 1.134 0 0 0-.773-.301h-.003c-.302 0-.584.115-.796.323a1.11 1.11 0 0 0-.342.792c0 .298.115.573.327.778.216.212.517.338.825.338h.008c.297 0 .561-.108.755-.297.175-.179.286-.447.286-.696Z" fill="#fff"></path></svg>
+    </div>
+
+    <div>
+        <div class="box1">
+            <div class="box2">
+                <div class="box3">
+                    <h2 class="h2c">Free</h2>
+                    <p class="p11">For individuals and businesses getting started with social media.</p>
+                    <div class="box4">
+                        <div class="box5">
+                            <p class="p12"><span class="span1">$</span> <!-- -->0</p>
+                        </div>
+                        <p class="p13">Manage up to three channels</p>
+                        <p class="p14">Billed at <strong> $<!-- -->0<!-- -->/year</strong></p>
+                    </div>
+                    <a type="primary" href="" class="a1">Get started</a>
+                    <ul class="list">
+                        <li class="listpoint">
+                            <svg viewBox="0 0 32 31" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-miterlimit="10" class="icon-checkMark" width="38px" height="38px"><path d="M29.495 15.01c0 7.455-6.044 13.5-13.5 13.5s-13.5-6.045-13.5-13.5c0-7.456 6.044-13.5 13.5-13.5s13.5 6.044 13.5 13.5" fill="transparent" fill-rule="nonzero"></path><path d="M10.567 16.026l4.513 4.412 6.129-9.709" fill="none" stroke="#2c4bff" stroke-width="2"></path></svg>
+                            <span>Basic publishing tools<!-- --> </span>
+                        </li>
+                        <li class="listpoint">
+                            <svg viewBox="0 0 32 31" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-miterlimit="10" class="icon-checkMark" width="38px" height="38px"><path d="M29.495 15.01c0 7.455-6.044 13.5-13.5 13.5s-13.5-6.045-13.5-13.5c0-7.456 6.044-13.5 13.5-13.5s13.5 6.044 13.5 13.5" fill="transparent" fill-rule="nonzero"></path><path d="M10.567 16.026l4.513 4.412 6.129-9.709" fill="none" stroke="#2c4bff" stroke-width="2"></path></svg>
+                            <span>Landing page builder<!-- --> </span>
+                        </li>
+                    </ul>
+                    <div>
+                        <a class="a11" href="#compare">See all features</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="box3">
+                    <h2 class="h2c">Essentials</h2>
+                    <p class="p11">For professionals who use publishing, analytics &amp; engagement tools.</p>
+                    <div class="box4">
+                        <div class="box5">
+                            <p class="p12"><span class="span1">$</span> <!-- -->5</p>
+                            <div>
+                                <span class="span2">/month</span>
+                                <span class="span2">per channel</span>
+                            </div>
+                    </div>
+                    <p class="p13">Add additional channels for $5/month</p>
+                    <p class="p13">Billed at <span>$<!-- -->72<!-- --> </span><strong> $<!-- -->60<!-- -->/year</strong></p>
+                </div>
+                <a type="primary" href="" class="a1">Try free for 14-days</a>
+                <ul class="list">
+                    <li class="listpoint">
+                        <svg viewBox="0 0 32 31" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-miterlimit="10" class="icon-checkMark" width="38px" height="38px"><path d="M29.495 15.01c0 7.455-6.044 13.5-13.5 13.5s-13.5-6.045-13.5-13.5c0-7.456 6.044-13.5 13.5-13.5s13.5 6.044 13.5 13.5" fill="transparent" fill-rule="nonzero"></path><path d="M10.567 16.026l4.513 4.412 6.129-9.709" fill="none" stroke="#2c4bff" stroke-width="2"></path></svg>
+                        <span class="span2">Planning &amp; publishing tools<!-- --> </span>
+                    </li>
+                    <li class="listpoint">
+                        <svg viewBox="0 0 32 31" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-miterlimit="10" class="icon-checkMark" width="38px" height="38px"><path d="M29.495 15.01c0 7.455-6.044 13.5-13.5 13.5s-13.5-6.045-13.5-13.5c0-7.456 6.044-13.5 13.5-13.5s13.5 6.044 13.5 13.5" fill="transparent" fill-rule="nonzero"></path><path d="M10.567 16.026l4.513 4.412 6.129-9.709" fill="none" stroke="#2c4bff" stroke-width="2"></path></svg>
+                        <span class="span2">Analytics tools<!-- --> </span>
+                    </li>
+                    <li class="listpoint">
+                        <svg viewBox="0 0 32 31" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-miterlimit="10" class="icon-checkMark" width="38px" height="38px"><path d="M29.495 15.01c0 7.455-6.044 13.5-13.5 13.5s-13.5-6.045-13.5-13.5c0-7.456 6.044-13.5 13.5-13.5s13.5 6.044 13.5 13.5" fill="transparent" fill-rule="nonzero"></path><path d="M10.567 16.026l4.513 4.412 6.129-9.709" fill="none" stroke="#2c4bff" stroke-width="2"></path></svg>
+                        <span class="span2">Engagement tools<!-- --> </span>
+                    </li>
+                    <li class="listpoint"><svg viewBox="0 0 32 31" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-miterlimit="10" class="icon-checkMark" width="38px" height="38px"><path d="M29.495 15.01c0 7.455-6.044 13.5-13.5 13.5s-13.5-6.045-13.5-13.5c0-7.456 6.044-13.5 13.5-13.5s13.5 6.044 13.5 13.5" fill="transparent" fill-rule="nonzero"></path><path d="M10.567 16.026l4.513 4.412 6.129-9.709" fill="none" stroke="#2c4bff" stroke-width="2"></path></svg> <span class="span2">Landing page builder<!-- --> </span>
+                    </li>
+                    <li class="listpoint">
+                        <svg viewBox="0 0 32 31" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-miterlimit="10" class="icon-checkMark" width="38px" height="38px"><path d="M29.495 15.01c0 7.455-6.044 13.5-13.5 13.5s-13.5-6.045-13.5-13.5c0-7.456 6.044-13.5 13.5-13.5s13.5 6.044 13.5 13.5" fill="transparent" fill-rule="nonzero"></path><path d="M10.567 16.026l4.513 4.412 6.129-9.709" fill="none" stroke="#2c4bff" stroke-width="2"></path></svg> <span class="span2">Easy, clear exportable reports<!-- --> </span>
+                    </li>
+                </ul>
+                <div>
+                    <a class="a11" href="#compare">See all features</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box2">
+            <div class="box3">
+                <h2 class="h2c">Team</h2>
+                <p class="p11">For teams who want unlimited user seating, collaboration, and reporting.</p>
+                <div class="box4">
+                    <div class="box5">
+                        <p class="p12"><span class="span1">$</span> <!-- -->10</p>
+                        <div>
+                            <span class="span2">/month</span>
+                            <span class="span2">per channel</span>
+                        </div>
+                </div>
+                <p class="p13">Add additional channels for $10/month</p>
+                <p class="p13">Billed at <span>$<!-- -->72<!-- --> </span><strong> $<!-- -->60<!-- -->/year</strong></p>
+            </div>
+            <a type="primary" href="" class="a1">Try free for 14-days</a>
+            <ul class="list">
+                <li class="listpoint">
+                    <svg viewBox="0 0 32 31" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-miterlimit="10" class="icon-checkMark" width="38px" height="38px"><path d="M29.495 15.01c0 7.455-6.044 13.5-13.5 13.5s-13.5-6.045-13.5-13.5c0-7.456 6.044-13.5 13.5-13.5s13.5 6.044 13.5 13.5" fill="transparent" fill-rule="nonzero"></path><path d="M10.567 16.026l4.513 4.412 6.129-9.709" fill="none" stroke="#2c4bff" stroke-width="2"></path></svg>
+                    <span class="span2">Essentials features, plus:<!-- --> </span>
+                </li>
+                <li class="listpoint">
+                    <svg viewBox="0 0 32 31" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-miterlimit="10" class="icon-checkMark" width="38px" height="38px"><path d="M29.495 15.01c0 7.455-6.044 13.5-13.5 13.5s-13.5-6.045-13.5-13.5c0-7.456 6.044-13.5 13.5-13.5s13.5 6.044 13.5 13.5" fill="transparent" fill-rule="nonzero"></path><path d="M10.567 16.026l4.513 4.412 6.129-9.709" fill="none" stroke="#2c4bff" stroke-width="2"></path></svg>
+                    <span class="span2">Unlimited team members & clients<!-- --> </span>
+                </li>
+                <li class="listpoint">
+                    <svg viewBox="0 0 32 31" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-miterlimit="10" class="icon-checkMark" width="38px" height="38px"><path d="M29.495 15.01c0 7.455-6.044 13.5-13.5 13.5s-13.5-6.045-13.5-13.5c0-7.456 6.044-13.5 13.5-13.5s13.5 6.044 13.5 13.5" fill="transparent" fill-rule="nonzero"></path><path d="M10.567 16.026l4.513 4.412 6.129-9.709" fill="none" stroke="#2c4bff" stroke-width="2"></path></svg>
+                    <span class="span2">Draft collaboration tools<!-- --> </span>
+                </li>
+            </ul>
+            <div>
+                <a class="a11" href="#compare">See all features</a>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <div class="box2">
+        <div class="box3">
+            <h2 class="h2c">Agency</h2>
+            <p class="p11">For marketing agencies with 10 or more social channels.</p>
+            <div class="box4">
+                <div class="box5">
+                    <p class="p12"><span class="span1">$</span> <!-- -->100</p>
+                    <div>
+                        <span class="span2">/month</span>
+                        <span class="span2">per channel</span>
+                    </div>
+            </div>
+            <p class="p13">Add additional channels for $100/month</p>
+            <p class="p13">Billed at <span>$<!-- -->72<!-- --> </span><strong> $<!-- -->60<!-- -->/year</strong></p>
+        </div>
+        <a type="primary" href="" class="a1">Try free for 14-days</a>
+        <ul class="list">
+            <li class="listpoint">
+                <svg viewBox="0 0 32 31" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-miterlimit="10" class="icon-checkMark" width="38px" height="38px"><path d="M29.495 15.01c0 7.455-6.044 13.5-13.5 13.5s-13.5-6.045-13.5-13.5c0-7.456 6.044-13.5 13.5-13.5s13.5 6.044 13.5 13.5" fill="transparent" fill-rule="nonzero"></path><path d="M10.567 16.026l4.513 4.412 6.129-9.709" fill="none" stroke="#2c4bff" stroke-width="2"></path></svg>
+                <span class="span2">Team features, plus:<!-- --> </span>
+            </li>
+            <li class="listpoint">
+                <svg viewBox="0 0 32 31" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-miterlimit="10" class="icon-checkMark" width="38px" height="38px"><path d="M29.495 15.01c0 7.455-6.044 13.5-13.5 13.5s-13.5-6.045-13.5-13.5c0-7.456 6.044-13.5 13.5-13.5s13.5 6.044 13.5 13.5" fill="transparent" fill-rule="nonzero"></path><path d="M10.567 16.026l4.513 4.412 6.129-9.709" fill="none" stroke="#2c4bff" stroke-width="2"></path></svg>
+                <span class="span2">Custom access & permissions<!-- --> </span>
+            </li>
+            <li class="listpoint">
+                <svg viewBox="0 0 32 31" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-miterlimit="10" class="icon-checkMark" width="38px" height="38px"><path d="M29.495 15.01c0 7.455-6.044 13.5-13.5 13.5s-13.5-6.045-13.5-13.5c0-7.456 6.044-13.5 13.5-13.5s13.5 6.044 13.5 13.5" fill="transparent" fill-rule="nonzero"></path><path d="M10.567 16.026l4.513 4.412 6.129-9.709" fill="none" stroke="#2c4bff" stroke-width="2"></path></svg>
+                <span class="span2">Agency-friendly pricing<!-- --> </span>
+            </li>
+        </ul>
+        <div>
+            <a class="a11" href="#compare">See all features</a>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<!-- <section>
+    <section class="back1"></section>
+</section> -->
+<section class="logoo">
+    <div class="logo1">
+        <div class="mainlogo">
+            <span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%"><span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%"><img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2789%27%20height=%2751%27/%3e"></span><img alt="Logo of Meta Business Partner" src="https://static.buffer.com/cdn-cgi/image/w=256,quality=90,format=auto/marketing/static/ui/meta-business-partner@2x-2.png" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" srcset="https://static.buffer.com/cdn-cgi/image/w=96,quality=90,format=auto/marketing/static/ui/meta-business-partner@2x-2.png 1x, https://static.buffer.com/cdn-cgi/image/w=256,quality=90,format=auto/marketing/static/ui/meta-business-partner@2x-2.png 2x"><noscript><img alt="Logo of Meta Business Partner" srcSet="https://static.buffer.com/cdn-cgi/image/w=96,quality=90,format=auto/marketing/static/ui/meta-business-partner@2x-2.png 1x, https://static.buffer.com/cdn-cgi/image/w=256,quality=90,format=auto/marketing/static/ui/meta-business-partner@2x-2.png 2x" src="https://static.buffer.com/cdn-cgi/image/w=256,quality=90,format=auto/marketing/static/ui/meta-business-partner@2x-2.png" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" loading="lazy"/></noscript></span>
+
+            <span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%"><span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%"><img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27148%27%20height=%2755%27/%3e"></span><img alt="Logo of Pinterest marketing partner" src="https://static.buffer.com/cdn-cgi/image/w=384,quality=90,format=auto/marketing/static/ui/pinterest-marketing-partner@2x-2.png" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" srcset="https://static.buffer.com/cdn-cgi/image/w=256,quality=90,format=auto/marketing/static/ui/pinterest-marketing-partner@2x-2.png 1x, https://static.buffer.com/cdn-cgi/image/w=384,quality=90,format=auto/marketing/static/ui/pinterest-marketing-partner@2x-2.png 2x"><noscript><img alt="Logo of Pinterest marketing partner" srcSet="https://static.buffer.com/cdn-cgi/image/w=256,quality=90,format=auto/marketing/static/ui/pinterest-marketing-partner@2x-2.png 1x, https://static.buffer.com/cdn-cgi/image/w=384,quality=90,format=auto/marketing/static/ui/pinterest-marketing-partner@2x-2.png 2x" src="https://static.buffer.com/cdn-cgi/image/w=384,quality=90,format=auto/marketing/static/ui/pinterest-marketing-partner@2x-2.png" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" loading="lazy"/></noscript></span>
+
+            <span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%"><span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%"><img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27146%27%20height=%2749%27/%3e"></span><img alt="Logo of LinkedIn marketing partner" src="https://static.buffer.com/cdn-cgi/image/w=384,quality=90,format=auto/marketing/static/ui/linkedin-marketing-partner@2x-2.png" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" srcset="https://static.buffer.com/cdn-cgi/image/w=256,quality=90,format=auto/marketing/static/ui/linkedin-marketing-partner@2x-2.png 1x, https://static.buffer.com/cdn-cgi/image/w=384,quality=90,format=auto/marketing/static/ui/linkedin-marketing-partner@2x-2.png 2x"><noscript><img alt="Logo of LinkedIn marketing partner" srcSet="https://static.buffer.com/cdn-cgi/image/w=256,quality=90,format=auto/marketing/static/ui/linkedin-marketing-partner@2x-2.png 1x, https://static.buffer.com/cdn-cgi/image/w=384,quality=90,format=auto/marketing/static/ui/linkedin-marketing-partner@2x-2.png 2x" src="https://static.buffer.com/cdn-cgi/image/w=384,quality=90,format=auto/marketing/static/ui/linkedin-marketing-partner@2x-2.png" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" loading="lazy"/></noscript></span>
+        </div>
+   </div>
+</section>
+
+
+
+
+
+<!-- <footer id="footer">
+    <div>
+       <h1>DigiBlog</h1>
+       <div id="footicons">
+          <div class="icon">
+             <a href="https://www.instagram.com/buffer/" target="_blank"><img class="img1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1024px-Instagram_logo_2016.svg.png"></a>
+          </div>
+          <div class="icon">
+             <a href="https://www.facebook.com/bufferapp" target="_blank"><img class="img1" src="https://1.bp.blogspot.com/-S8HTBQqmfcs/XN0ACIRD9PI/AAAAAAAAAlo/FLhccuLdMfIFLhocRjWqsr9cVGdTN_8sgCPcBGAYYCw/s1600/f_logo_RGB-Blue_1024.png"></a>
+          </div>
+          <div class="icon">
+             <a href="https://twitter.com/buffer" target="_blank"><img class="img1" src="http://1000logos.net/wp-content/uploads/2017/06/Twitter-Logo.png" alt=""></a>
+          </div>
+          <div class="icon">
+             <a href="https://www.tiktok.com/notfound" target="_blank"><img class="img1" src="https://tse4.mm.bing.net/th?id=OIP.7aAPtIA6J7dgoigFf1BEtAHaJs&pid=Api&P=0" alt=""></a>
+          </div>
+          <div class="icon">
+             <a href="https://www.linkedin.com/company/bufferapp/" target="_blank"><img class="img1" src="https://pngimg.com/uploads/linkedIn/linkedIn_PNG8.png" alt=""></a>
+          </div>
+          <div class="icon">
+             <a href="https://in.pinterest.com/bufferapp/" target="_blank"><img class="img1" src="http://lofrev.net/wp-content/photos/2017/05/pinterest_logo.jpg" alt=""></a>
+          </div>
+
+       </div>
+       <h3>Download</h3>
+       <span><button>App Store</button></span><button>Google Play</button>
+
+    </div>
+<div class="foot">
+     <div>
+
+       <h3>Tools</h3> 
+       <p>Publishing</p>
+       <p>Analytics</p>
+       <p>Engagement</p>
+       <p>start Page</p>
+       <p>Extras</p>     
+    </div> 
+<div>
+  <h3>Resources</h3>
+  <p>Blog</p>
+  <p>Content Library</p>
+  <p>Browser Extension</p>
+  <p>Free Image</p>
+  <p>Editor</p>
+</div>
+<div>
+  <h3>Support</h3>
+  <p>Help Center</p>
+  <p>Status</p>
+  <p>What's New</p>
+  <p>Product Roadmap</p>
+  
+</div>
+<div>
+  <h3>Company</h3>
+  <p>About</p>
+  <p>Tranparency</p>
+  <p>Careers</p>
+  <p>Accessibility</p>
+  <p>Press</p>
+  <p>Sitemap</p>
+</div>
+</div>
+  </footer> -->
+
+
+
+
+
+    
+
+
+    
+</body>
+</html>
